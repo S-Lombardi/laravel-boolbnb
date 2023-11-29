@@ -12,7 +12,7 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {   
+    {
         //AGGIUNGO ALLA TABELLA USER DUE COLONNE: COGNOME E DATA DI NASCITA
         Schema::table('users', function (Blueprint $table) {
             $table->string('surname')->after('name')->nullable();

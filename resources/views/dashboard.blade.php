@@ -3,23 +3,22 @@
 @section('content')
 <div class="container">
     <h2 class="fs-4 text-secondary my-4">
-        {{ __('Dashboard') }}
+        {{ __('Dashboard') }} <span>{{Auth::user()->name}}</span> <span>{{Auth::user()->surname}}</span>
     </h2>
-    <div class="row justify-content-center">
+    
+    <div class="row">
         <div class="col">
-            <div class="card">
-                <div class="card-header">{{ __('User Dashboard') }}</div>
+            {{-- PULSANTE APPARTAMENTI --}}
+            <a href=" " class="btn btn-primary">
+                I miei appartamenti
+            </a>
+        </div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+        <div class="col">
+            {{-- PULSANTE AGGIUNGI APPARTAMENTO - Rotta alla Create --}}
+            <a href=" " class="btn btn-success">
+                Aggiungi un appartamento
+            </a>
         </div>
     </div>
 </div>
